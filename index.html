@@ -95,7 +95,7 @@
 #nav {
     line-height:30px;
     background-color:#eeeeee;
-    height:15000px;
+    height:13000px;
     width:200px;
     float:left;
     padding:5px;        
@@ -135,21 +135,21 @@
   <h2><center><I>Brief Introdcution</I></h2>
     <h3><align="left"><font face=Times color=gray>
 Face pixelation in TV shows or videos is manually realized and not well studied to date. As the prevailing of online video streaming, we develop a new tool called face pixelation in live-streaming (FPLV) to generate automatic personal privacy filtering during unconstrained streaming. FPLV is organized in a frame-to-video structure for fast and accurate pixelation of irrelevant people's faces. Leveraging image-based face detection and recognition networks on individual frames, we propose a positioned incremental affinity propagation (PIAP) clustering algorithm to associate faces across frames. Through deep feature and position aggregated affinities, PIAP handles the cluster number generation, new cluster discovering, and faces' raw trajectories forming simultaneously. Affected by various factors, raw trajectories might be intermittent and unreliable. Hence, we introduce a proposal net for loosed face detection with an empirical likelihood test to compensate the deep network insufficiency and refine the raw trajectories. A Gaussian filter is laid on refined trajectories for final pixelation. FPLV obtains satisfying accuracy and real-time performances under streaming video data we collected. </align="left"></font></h3>
-<br><div id="section">
+<br><br><div id="section">
 <h2><center><I>Graph of Conceptual Working Pipeline</I></h2>
   <p><img src="/imgs/F1.jpg"  alt="Conceptual Working Pipeline" /></p>
 
-<br><div id="section">
+<br><br><div id="section">
 <h2><center><I>Toy example of PIAP Clustering</I></h2>
-	<h3><align="left"><font face=Times color=gray>
+	<br><h3><align="left"><font face=Times color=gray>
 		A toy example of how PIAP Clustering works is presented. Traditional AP clustering is implemented on the first batch of objects, it converges in (a), and the clustering result is shown in (b). New objects arrive in (c), and aggregated affinity is recomputed in (d). Message-passing continues in (e)(h), and reconverges in (i). The final clustering result is shown in (j).
 		</align="left"></font></h3>
   <p><img src="/imgs/IAP.png" width="90%" height="90%" alt="PIAP Example" /></p>
 	
 	
-<br><div id="section">
+<br><br><div id="section">
 <h2><center><I>The Structure of Proposal Net(Compensate Detection through Shallow CNN)</I></h2>
-	<h3><align="left"><font face=Times color=gray>
+	<br><h3><align="left"><font face=Times color=gray>
 	To fix gaps accumulated by false negatives in a trajectory, we build a proposal net structured as below. The proposal net resizes frames as MTCNN does, and proposes suspicious face areas in such gap frames.
 	</align="left"></font></h3>
   <p><img src="/imgs/2 (1).png"  alt="Proposal Net" /></p>
@@ -160,7 +160,7 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
 	
 	
 	
-<div id="section">
+<br><br><div id="section">
   <h2><center><I>Pixelation Results#1</I></h2>
     <h4><align="left"><font face=arial color=gray>
       We demonstrate the pixelation results of FPLV vs. Youtube Studio offered offline face blur tool on high resolution (1080p) multi-people (complex) scenario in this section. A thumbnail is used to show the results of pixelation in sequential order from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio; FPLV generates the lower row in real-time. This test presents the FPLV's ability of raw trajectories refinement. The live-streaming happened in a crowded street with a noisy and complex backgournd. Except the main streamer James Xiao, all other people including the dancers are set to be blurred. With unpredictable camera movements, tracking algorithms cannot handle the drifting and tracking loss problem due to the failed linkage of tracklets. However, FPLV can still place mosaics on irrelevant people's faces precisely through compensating detections and empirical likelihood ratio test.
@@ -205,7 +205,7 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
         <p><img src="/imgs/412.png"  alt="FPLV Face Blur Result" /></p>
 -->
 
-<div id="section">
+<br><br><div id="section">
   <h2><center><I>Pixelation Results#2</I></h2>
     <h4><align="left"><font face=arial color=gray>
       Another pixelation result of FPLV vs. Youtube Studio on low resolution (480p) few-people (simple) scenario is shown in this section. A thumbnail is used to display the results of pixelation in live-streaming from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio. FPLV generates the lower row in real-time. This test focus on the typical overlapping problem that cannot be handled by the current face tracking algorithms. James Xiao is playing the piano while his friend is watching. His friend's face is set to be blurred for privacy protection.When two or more faces are overlapped with each other, we don't want to pixelate the occluded faces anymore since they are invisible to the audience. However, for tracking algorithms, they insist on predicting the movement of such partial/fully occluded faces and retain their tracklet. These algorithms will produce many annoying and odd mosaics during streaming.
@@ -235,7 +235,7 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
         <td><img src="/imgs/123.png" height="570" width="400" ></td>
         </tr></table>
 
-<div id="section">
+<br><br><div id="section">
   <br><br>
 	<h2><center><I>Video Test Data Results(Naive Cases)</I></h2>
 	<body>
@@ -264,7 +264,7 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
 		
 
 		
-<div id="section">
+<br><br><div id="section">
   <br><br>
 	<h2><center><I>Video Test Data Results(Harsh Cases)</I></h2>
 	<h3><align="left"><font face=Times color=gray>
@@ -309,7 +309,7 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
 	  
 	  
 
-<div id="section">
+<br><br><div id="section">
   <br><br>
   <h2><center><I>Brief Conclusion</I></h2>
     <h3><align="left"><font face=Times color=gray>
