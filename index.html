@@ -155,85 +155,6 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
   <p><img src="/imgs/2 (1).png" width="65%" height="65%" hspace="100" vspace="30" alt="Proposal Net" /></p>
 
 	
-	
-	
-	
-	
-	
-<br><br><div id="section">
-  <h2><center><I>Pixelation Results#1</I></h2>
-    <h4><align="left"><font face=arial color=gray>
-      We demonstrate the pixelation results of FPLV vs. Youtube Studio offered offline face blur tool on high resolution (1080p) multi-people (complex) scenario in this section. A thumbnail is used to show the results of pixelation in sequential order from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio; FPLV generates the lower row in real-time. This test presents the FPLV's ability of raw trajectories refinement. The live-streaming happened in a crowded street with a noisy and complex backgournd. Except the main streamer James Xiao, all other people including the dancers are set to be blurred. With unpredictable camera movements, tracking algorithms cannot handle the drifting and tracking loss problem due to the failed linkage of tracklets. However, FPLV can still place mosaics on irrelevant people's faces precisely through compensating detections and empirical likelihood ratio test.
-      <br></align="left"></font></h4>
-      <p><center><font size="5" face="arial" color="red">The Thumbnail of Pixelation Results#1<br></center></font></p>
-        <p><img src="/imgs/R2.png"  alt="thumbnail" /></p>
-      <p><center><font size="5" face="arial" color="red">Original Pictures of Pixelation Results#1<br></center></font></p>
-      <p></p>
-      <table border="5"><tr>
-        <th><h3><font color=blue>Youtube Studio Pixelation Results</font></h3></th>
-        <th><h3><font color=blue>FPLV Pixelation Results</font></h3></th>
-        </tr>
-        <tr>
-        <td><img src="/imgs/309.png" height="681" width="666" ></td>
-        <td><img src="/imgs/409.png" height="681" width="666" ></td>
-        </tr>
-        <tr>
-        <td><img src="/imgs/310.png" height="681" width="666" ></td>
-        <td><img src="/imgs/410.png" height="681" width="666" ></td>
-        </tr>
-        <tr>
-        <td><img src="/imgs/311.png" height="681" width="666" ></td>
-        <td><img src="/imgs/411.png" height="681" width="666" ></td>
-        </tr>
-        <tr>
-        <td><img src="/imgs/312.png" height="681" width="666" ></td>
-        <td><img src="/imgs/412.png" height="681" width="666" ></td>
-        </tr></table>
-
-
-
-<!--
-        <p><img src="/imgs/309.png"  alt="Youtube Studio Offline Face Blur Result" /><img src="/imgs/409.png"  alt="FPLV Face Blur Result" /> </p>
-        <p><img src="/imgs/310.png"  alt="Youtube Studio Offline Face Blur Result" /></p>
-        <p><img src="/imgs/311.png"  alt="Youtube Studio Offline Face Blur Result" /></p>
-        <p><img src="/imgs/312.png"  alt="Youtube Studio Offline Face Blur Result" /></p>
-      <h3><center>FPLV Pixelation Results#1</center></h3>
-        <p></p>
-        <p><img src="/imgs/409.png"  alt="FPLV Face Blur Result" /></p>
-        <p><img src="/imgs/410.png"  alt="FPLV Face Blur Result" /></p>
-        <p><img src="/imgs/411.png"  alt="FPLV Face Blur Result" /></p>
-        <p><img src="/imgs/412.png"  alt="FPLV Face Blur Result" /></p>
--->
-
-<br><br><div id="section">
-  <h2><center><I>Pixelation Results#2</I></h2>
-    <h4><align="left"><font face=arial color=gray>
-      Another pixelation result of FPLV vs. Youtube Studio on low resolution (480p) few-people (simple) scenario is shown in this section. A thumbnail is used to display the results of pixelation in live-streaming from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio. FPLV generates the lower row in real-time. This test focus on the typical overlapping problem that cannot be handled by the current face tracking algorithms. James Xiao is playing the piano while his friend is watching. His friend's face is set to be blurred for privacy protection.When two or more faces are overlapped with each other, we don't want to pixelate the occluded faces anymore since they are invisible to the audience. However, for tracking algorithms, they insist on predicting the movement of such partial/fully occluded faces and retain their tracklet. These algorithms will produce many annoying and odd mosaics during streaming.
-      <br></align="left"></font></h4>
-      <p><center><font size="5" face="arial" color="red">The Thumbnail of Pixelation Results#2<br></center></font></p>
-        <p><img src="/imgs/R1.png"  alt="thumbnail" /></p>
-      <p><center><font size="5" face="arial" color="red">Original Pictures of Pixelation Results#2<br></center></font></p>
-      <p></p>
-      <table border="5"><tr>
-        <th><h3><font color=blue>Youtube Studio Pixelation Results</font></h3></th>
-        <th><h3><font color=blue>FPLV Pixelation Results</font></h3></th>
-        </tr>
-        <tr>
-        <td><img src="/imgs/116.png" height="570" width="400" ></td>
-        <td><img src="/imgs/117.png" height="570" width="400" ></td>
-        </tr>
-        <tr>
-        <td><img src="/imgs/111.png" height="570" width="400" ></td>
-        <td><img src="/imgs/112.png" height="570" width="400" ></td>
-        </tr>
-        <tr>
-        <td><img src="/imgs/114.png" height="570" width="400" ></td>
-        <td><img src="/imgs/113.png" height="570" width="400" ></td>
-        </tr>
-        <tr>
-        <td><img src="/imgs/126.png" height="570" width="400" ></td>
-        <td><img src="/imgs/123.png" height="570" width="400" ></td>
-        </tr></table>
 
 <br><br><div id="section">
   <br><br>
@@ -303,7 +224,97 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
 	<body>
 	<iframe width="780" height="470" src="//player.bilibili.com/player.html?aid=35644211&cid=62513277&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 	</body>	  
-	  
+	  	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<br><br><div id="section">
+  <h2><center><I>Pixelation Results Analysis#1</I></h2>
+    <h4><align="left"><font face=arial color=gray>
+      We demonstrate the pixelation results of FPLV vs. Youtube Studio offered offline face blur tool on high resolution (1080p) multi-people (complex) scenario in this section. A thumbnail is used to show the results of pixelation in sequential order from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio; FPLV generates the lower row in real-time. This test presents the FPLV's ability of raw trajectories refinement. The live-streaming happened in a crowded street with a noisy and complex backgournd. Except the main streamer James Xiao, all other people including the dancers are set to be blurred. With unpredictable camera movements, tracking algorithms cannot handle the drifting and tracking loss problem due to the failed linkage of tracklets. However, FPLV can still place mosaics on irrelevant people's faces precisely through compensating detections and empirical likelihood ratio test.
+      <br></align="left"></font></h4>
+      <p><center><font size="5" face="arial" color="red">The Thumbnail of Pixelation Results#1<br></center></font></p>
+        <p><img src="/imgs/R2.png"  alt="thumbnail" /></p>
+      <p><center><font size="5" face="arial" color="red">Original Pictures of Pixelation Results#1<br></center></font></p>
+      <p></p>
+      <table border="5"><tr>
+        <th><h3><font color=blue>Youtube Studio Pixelation Results</font></h3></th>
+        <th><h3><font color=blue>FPLV Pixelation Results</font></h3></th>
+        </tr>
+        <tr>
+        <td><img src="/imgs/309.png" height="681" width="666" ></td>
+        <td><img src="/imgs/409.png" height="681" width="666" ></td>
+        </tr>
+        <tr>
+        <td><img src="/imgs/310.png" height="681" width="666" ></td>
+        <td><img src="/imgs/410.png" height="681" width="666" ></td>
+        </tr>
+        <tr>
+        <td><img src="/imgs/311.png" height="681" width="666" ></td>
+        <td><img src="/imgs/411.png" height="681" width="666" ></td>
+        </tr>
+        <tr>
+        <td><img src="/imgs/312.png" height="681" width="666" ></td>
+        <td><img src="/imgs/412.png" height="681" width="666" ></td>
+        </tr></table>
+
+
+
+<!--
+        <p><img src="/imgs/309.png"  alt="Youtube Studio Offline Face Blur Result" /><img src="/imgs/409.png"  alt="FPLV Face Blur Result" /> </p>
+        <p><img src="/imgs/310.png"  alt="Youtube Studio Offline Face Blur Result" /></p>
+        <p><img src="/imgs/311.png"  alt="Youtube Studio Offline Face Blur Result" /></p>
+        <p><img src="/imgs/312.png"  alt="Youtube Studio Offline Face Blur Result" /></p>
+      <h3><center>FPLV Pixelation Results#1</center></h3>
+        <p></p>
+        <p><img src="/imgs/409.png"  alt="FPLV Face Blur Result" /></p>
+        <p><img src="/imgs/410.png"  alt="FPLV Face Blur Result" /></p>
+        <p><img src="/imgs/411.png"  alt="FPLV Face Blur Result" /></p>
+        <p><img src="/imgs/412.png"  alt="FPLV Face Blur Result" /></p>
+-->
+
+<br><br><div id="section">
+  <h2><center><I>Pixelation Results Analysis#2</I></h2>
+    <h4><align="left"><font face=arial color=gray>
+      Another pixelation result of FPLV vs. Youtube Studio on low resolution (480p) few-people (simple) scenario is shown in this section. A thumbnail is used to display the results of pixelation in live-streaming from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio. FPLV generates the lower row in real-time. This test focus on the typical overlapping problem that cannot be handled by the current face tracking algorithms. James Xiao is playing the piano while his friend is watching. His friend's face is set to be blurred for privacy protection.When two or more faces are overlapped with each other, we don't want to pixelate the occluded faces anymore since they are invisible to the audience. However, for tracking algorithms, they insist on predicting the movement of such partial/fully occluded faces and retain their tracklet. These algorithms will produce many annoying and odd mosaics during streaming.
+      <br></align="left"></font></h4>
+      <p><center><font size="5" face="arial" color="red">The Thumbnail of Pixelation Results#2<br></center></font></p>
+        <p><img src="/imgs/R1.png"  alt="thumbnail" /></p>
+      <p><center><font size="5" face="arial" color="red">Original Pictures of Pixelation Results#2<br></center></font></p>
+      <p></p>
+      <table border="5"><tr>
+        <th><h3><font color=blue>Youtube Studio Pixelation Results</font></h3></th>
+        <th><h3><font color=blue>FPLV Pixelation Results</font></h3></th>
+        </tr>
+        <tr>
+        <td><img src="/imgs/116.png" height="570" width="400" ></td>
+        <td><img src="/imgs/117.png" height="570" width="400" ></td>
+        </tr>
+        <tr>
+        <td><img src="/imgs/111.png" height="570" width="400" ></td>
+        <td><img src="/imgs/112.png" height="570" width="400" ></td>
+        </tr>
+        <tr>
+        <td><img src="/imgs/114.png" height="570" width="400" ></td>
+        <td><img src="/imgs/113.png" height="570" width="400" ></td>
+        </tr>
+        <tr>
+        <td><img src="/imgs/126.png" height="570" width="400" ></td>
+        <td><img src="/imgs/123.png" height="570" width="400" ></td>
+        </tr></table>
+
+
 	  
 	  
 	  
