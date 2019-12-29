@@ -130,22 +130,50 @@
   <a href="#"><p style="font-family:verdana;font-size:80%;color:green"><I>#5:Brief Conclusion</I></p><br></a>
 </div>
 
-
+ As the prevailing of video live streaming, establishing
+online pixelation, or at least online face pixelation mechanism, is
+an urgency. In this paper, we develop a new method called Face
+Pixelation in Video Live Streaming (FPVLS) to generate automatic personal privacy filtering during unconstrained streaming
+activities. Simply applying multi-face trackers will encounter
+the problem in computing efficiency, target drifting, and overpixelation due to the inherent feature of live video streaming.
+Therefore, for fast and accurate pixelation of irrelevant people’s
+faces, FPVLS is organized in a frame-to-video structure with
+two core stages. On individual frames, our framework utilizes
+the fast and cost-effective merits of image-based face detection
+and embedding networks to yield face vectors. We propose a
+Positioned Incremental Affinity Propagation (PIAP) clustering
+algorithm to associate the same person’s faces across frames
+according to face vectors and corresponding positions. PIAP
+also extends the classic affinity propagation into an incremental
+way for the efficient generation of the raw face trajectories.
+Such frame-wise accumulated raw trajectories are likely to be
+intermittent and unreliable on video level. Hence, we further
+introduce a trajectory refinement stage that merges a proposal
+network for loosed face detection with the two-sample test based
+on the Empirical Likelihood Ratio (ELR) statistic to compensate
+the deep network insufficiency and refine the raw trajectories
+seamlessly. The shallow proposal network and ELR will not
+trigger the computation burden. A Gaussian filter is laid on
+the refined trajectories for final pixelation
 
 <div id="section">
   <h2><center><I>Brief Introdcution</I></h2>
     <h3><align="left"><font face=Times color=gray>
-Face pixelation in TV shows or videos is manually realized and not well studied to date. As the prevailing of online video streaming, we develop a new tool called face pixelation in live-streaming (FPLV) to generate automatic personal privacy filtering during unconstrained streaming. FPLV is organized in a frame-to-video structure for fast and accurate pixelation of irrelevant people's faces. Leveraging image-based face detection and recognition networks on individual frames, we propose a positioned incremental affinity propagation (PIAP) clustering algorithm to associate faces across frames. Through deep feature and position aggregated affinities, PIAP handles the cluster number generation, new cluster discovering, and faces' raw trajectories forming simultaneously. Affected by various factors, raw trajectories might be intermittent and unreliable. Hence, we introduce a proposal net for loosed face detection with an empirical likelihood test to compensate the deep network insufficiency and refine the raw trajectories. A Gaussian filter is laid on refined trajectories for final pixelation. FPLV obtains satisfying accuracy and real-time performances under streaming video data we collected. </align="left"></font></h3>
+
+	    
+	    
+	    </align="left"></font></h3>
 <br><br><div id="section">
 <h2><center><I>Graph of Conceptual Working Pipeline</I></h2>
-  <p><img src="/imgs/F1.jpg"  alt="Conceptual Working Pipeline" /></p>
+  <p><img src="/imgs/Figure1.png"  alt="Conceptual Working Pipeline" /></p>
 
 <br><br><div id="section">
 <h2><center><I>Toy example of PIAP Clustering</I></h2>
 	<br><h3><align="left"><font face=Times color=gray>
-		A toy example of how PIAP Clustering works is presented. Traditional AP clustering is implemented on the first batch of objects, it converges in (a), and the clustering result is shown in (b). New objects arrive in (c), and aggregated affinity is recomputed in (d). Message-passing continues in (e)(h), and reconverges in (i). The final clustering result is shown in (j).
+		A toy example of how PIAP Clustering works is presented. (a)-(i) are corresponding to left-to-right and then top-to-bottom order of pictures in the toy example.
+	       Traditional AP clustering is implemented on the first batch of objects, it converges in (a), and the clustering result is shown in (b). New objects arrive in (c), and aggregated affinity is recomputed in (d). Message-passing continues in (e) and (h), and reconverges in (i). The final clustering result is shown in (i).
 		</align="left"></font></h3>
-  <p><img src="/imgs/IAP.png" width="100%" height="100%" alt="PIAP Example" /></p>
+  <p><img src="/imgs/Annotation.png" width="100%" height="100%" alt="PIAP Example" /></p>
 	
 	
 <br><br><div id="section">
@@ -155,6 +183,13 @@ Face pixelation in TV shows or videos is manually realized and not well studied 
 	</align="left"></font></h3>
   <p><img src="/imgs/2 (1).png" width="65%" height="65%" hspace="100" vspace="30" alt="Proposal Net" /></p>
 
+	<br><br><div id="section">
+<h2><center><I>Two-sample test based on ELR (compensate the detection lost)</I></h2>
+	<br><h3><align="left"><font face=Times color=gray>
+	Relationship of z (solid line) and z' (orange dash lines). Orange dots are the suspicious faces proposed by the proposal network. Red areas on z are the breaks recovred by
+interpolation.
+	</align="left"></font></h3>
+  <p><img src="/imgs/relate.png" width="65%" height="65%" hspace="100" vspace="30" alt="Proposal Net" /></p>
 	
 
 <br><br><div id="section">
