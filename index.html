@@ -118,7 +118,7 @@
 <body>
 
 <div id="header">
-<font size="7" face="Times"><center>FPVLS: Personal Privacy Protection Using Face Pixelation in Live Video Streaming</font><br><br>
+<font size="7" face="Times"><center>FPVLS: Personal Privacy Protection Using Face Pixelation in Video Live Streaming</font><br><br>
 	<font size="4" face="Times" color= "#5e083c"><center><I>University ML Camp 2019 Jeju</I>&nbsp&nbsp&nbsp&nbsp<img src="/imgs/JDC.jpg" align="middle" width="5%" height="5%"/><img src="/imgs/JEJU.jpeg" align="middle" width="5%" height="5%"/><img src="/imgs/NHN.png" align="middle" width="5%" height="5%"/></font><br>
 </div>
 
@@ -217,7 +217,7 @@ interpolation.
 		
 <br><br><div id="section">
   <br><br>
-	<h2><center><I>Video Test Data Results(Harsh Cases)</I></h2>
+	<h2><center><I>Video Test Data Results(sophisticated Cases)</I></h2>
 	<h3><align="left"><font face=Times color=gray>
         Youtude Studio offline tools failed to produce any mosaics in first few tens of seconds. Then, after some recalibration, Youtube Studio works under heavy drifting problems.
         </align="left"></font></h3>
@@ -272,7 +272,7 @@ interpolation.
 <br><br><div id="section">
   <h2><center><I>Pixelation Results Analysis#1</I></h2>
     <h4><align="left"><font face=arial color=gray>
-      We demonstrate the pixelation results of FPVLS vs. Youtube Studio offered offline face blur tool on high resolution (1080p) multi-people (complex) scenario in this section. A thumbnail is used to show the results of pixelation in sequential order from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio; FPVLS generates the lower row in real-time. This test presents the FPVLS's ability of raw trajectories refinement. The live-streaming happened in a crowded street with a noisy and complex backgournd. Except the main streamer James Xiao, all other people including the dancers are set to be blurred. With unpredictable camera movements, tracking algorithms cannot handle the drifting and tracking loss problem due to the failed linkage of tracklets. However, FPVLS can still place mosaics on irrelevant people's faces precisely through compensating detections and empirical likelihood ratio test.
+      We demonstrate the pixelation results of FPVLS vs. Youtube Studio offered offline face blur tool on 1080p high resolution (H) multi-people (S) scenario in this section. A thumbnail is used to show the results of pixelation in sequential order from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio; FPVLS generates the lower row in real-time. This test presents the FPVLS's ability of raw trajectories refinement. The live-streaming happened in a crowded street with a noisy and complex backgournd. Except the main streamer James Xiao, all other people including the dancers are set to be blurred. With unpredictable camera movements, tracking algorithms cannot handle the drifting and tracking loss problem due to the failed linkage of tracklets. However, FPVLS can still place mosaics on irrelevant people's faces precisely through compensating detections and empirical likelihood ratio test.
       <br></align="left"></font></h4>
       <p><center><font size="5" face="arial" color="red">The Thumbnail of Pixelation Results#1<br></center></font></p>
         <p><img src="/imgs/R2.png"  alt="thumbnail" /></p>
@@ -317,7 +317,7 @@ interpolation.
 <br><br><div id="section">
   <h2><center><I>Pixelation Results Analysis#2</I></h2>
     <h4><align="left"><font face=arial color=gray>
-      Another pixelation result of FPVLS vs. Youtube Studio on low resolution (480p) few-people (simple) scenario is shown in this section. A thumbnail is used to display the results of pixelation in live-streaming from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio. FPVLS generates the lower row in real-time. This test focus on the typical overlapping problem that cannot be handled by the current face tracking algorithms. James Xiao is playing the piano while his friend is watching. His friend's face is set to be blurred for privacy protection.When two or more faces are overlapped with each other, we don't want to pixelate the occluded faces anymore since they are invisible to the audience. However, for tracking algorithms, they insist on predicting the movement of such partial/fully occluded faces and retain their tracklet. These algorithms will produce many annoying and odd mosaics during streaming.
+      Another pixelation result of FPVLS vs. Youtube Studio on low resolution (480p) (L) few-people (N) scenario is shown in this section. A thumbnail is used to display the results of pixelation in live-streaming from left to right. Since the paper-sized thumbnail cannot present the details, we also show the origin pictures under the thumbnail one after one. The upper row of the thumbnail is produced offline by Youtube Studio. FPVLS generates the lower row in real-time. This test focus on the typical over-pixelation problem that cannot be handled by the current face tracking algorithms. James Xiao is playing the piano while his friend is watching. His friend's face is set to be blurred for privacy protection.When two or more faces are overlapped with each other, we don't want to pixelate the occluded faces anymore since they are invisible to the audience. However, for tracking algorithms, they insist on predicting the movement of such partial/fully occluded faces and retain their tracklet. These algorithms will produce many annoying and odd mosaics during streaming.
       <br></align="left"></font></h4>
       <p><center><font size="5" face="arial" color="red">The Thumbnail of Pixelation Results#2<br></center></font></p>
         <p><img src="/imgs/R1.png"  alt="thumbnail" /></p>
